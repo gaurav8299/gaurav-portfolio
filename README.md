@@ -1,6 +1,8 @@
 # Gaurav Rajput - Portfolio Website
 
-A modern, responsive portfolio website showcasing my skills and experience as a Full Stack Developer.
+## Overview
+
+This is a full-stack portfolio application showcasing Gaurav Rajput's professional profile, skills, and projects. The application is built using a modern tech stack with a React frontend, Express.js backend, and PostgreSQL database integration. It's designed as a single-page application (SPA) with smooth scrolling navigation and responsive design.
 
 ## 🚀 Features
 
