@@ -4,15 +4,37 @@ import { portfolioData } from "@/data/portfolio-data";
 import profileImage from "@assets/ProfilePicGaurav_1753904023501.jpg";
 
 export default function HeroSection() {
-  const handleDownloadResume = () => {
-    // Create a download link for the resume
+const handleDownloadResume = async () => {
+  try {
+    // Fetch the PDF file first to ensure it exists
+    const response = await fetch('/attached_assets/Gaurav_Rajput_Resume_SDE_1753903883387.pdf');
+    if (!response.ok) {
+      throw new Error('Resume file not found');
+    }
+    
+    // Create blob from response
+    const blob = await response.blob();
+    
+    // Create download link
+    const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = '/attached_assets/Gaurav_Rajput_Resume_SDE_1753903883387.pdf';
+    link.href = url;
     link.download = 'Gaurav_Rajput_Resume.pdf';
+    link.setAttribute('type', 'application/pdf');
+    
+    // Trigger download
     document.body.appendChild(link);
     link.click();
+    
+    // Cleanup
     document.body.removeChild(link);
-  };
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Error downloading resume:', error);
+    // Fallback to direct link
+    window.open('/attached_assets/Gaurav_Rajput_Resume_SDE_1753903883387.pdf', '_blank');
+  }
+};
 
   const handleContactClick = () => {
     const element = document.querySelector('#contact');
