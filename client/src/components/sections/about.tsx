@@ -51,7 +51,7 @@ export default function AboutSection() {
                     <div className="flex-1">
                       <h4 className="font-semibold text-secondary text-lg">{portfolioData.education.degree}</h4>
                       <p className="text-primary font-medium">{portfolioData.education.university}</p>
-                      <p className="text-neutral-600 text-sm">{portfolioData.education.duration} • CGPA: {portfolioData.education.cgpa}</p>
+                      <p className="text-neutral-600 text-sm">{portfolioData.education.duration} • CGPA: 7.84</p>
                       <p className="text-neutral-600 text-sm mt-1">{portfolioData.education.location}</p>
                     </div>
                   </div>
