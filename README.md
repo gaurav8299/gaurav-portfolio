@@ -68,18 +68,10 @@ npm run dev
 
 4. Open [http://localhost:5000](http://localhost:5000) in your browser
 
-## 📱 Screenshots
-
-The portfolio includes:
-- Professional hero section with animated elements
-- Comprehensive skills showcase
-- Project gallery with live demo links
-- Interactive contact form
-- Responsive design for all devices
 
 ## 🔗 Live Demo
 
-[View Live Portfolio](your-deployment-url)
+[View Live Portfolio](https://gaurav-portfolio-tnae.onrender.com/)
 
 ## 📄 Resume
 
